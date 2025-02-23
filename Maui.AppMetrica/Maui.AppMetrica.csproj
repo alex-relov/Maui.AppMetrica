@@ -10,6 +10,18 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 
+		<IsTrimmable>true</IsTrimmable>
+    	<Version>1.0.0</Version>
+		<Title>Net.Maui.AppMetrica</Title>
+		<Description>AppMetrica for .net maui</Description>
+		<PackageProjectUrl>https://github.com/alex-relov</PackageProjectUrl>
+    	<RepositoryUrl>https://github.com/alex-relov/Maui.AppMetrica</RepositoryUrl>
+    	<RepositoryType>git</RepositoryType>
+		<PackageTags>appmetrica;crash;analytics;yandex;ios;android;maui</PackageTags>
+		<PackageReleaseNotes>ios implementation</PackageReleaseNotes>
+		<Authors>$(AssemblyName)</Authors>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">15.0</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
@@ -22,9 +34,15 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 	</ItemGroup>
 
-
 	<ItemGroup Condition="$(TargetFramework.Contains('ios'))">
 		<PackageReference Include="Net.iOS.AppMetrica.Binding" Version="5.8.0" />
 	</ItemGroup>
+
+	<ItemGroup>
+    	<None Include="..\logo.jpg">
+      		<Pack>True</Pack>
+      		<PackagePath>\</PackagePath>
+    	</None>
+  	</ItemGroup>
 
 </Project>
