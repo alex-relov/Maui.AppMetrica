@@ -65,7 +65,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="../Maui.AppMetrica/Maui.AppMetrica.csproj" />
+	  <ProjectReference Include="../Net.Maui.AppMetrica/Net.Maui.AppMetrica.csproj" />
 	</ItemGroup>
 
 </Project>

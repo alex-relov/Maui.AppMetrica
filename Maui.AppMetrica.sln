@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maui.AppMetrica", "Maui.AppMetrica\Maui.AppMetrica.csproj", "{C822AE0D-46C5-4C88-B7B3-6CA53C4810B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net.Maui.AppMetrica", "Net.Maui.AppMetrica\Net.Maui.AppMetrica.csproj", "{C822AE0D-46C5-4C88-B7B3-6CA53C4810B2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppMetricaSample", "AppMetricaSample\AppMetricaSample.csproj", "{DDAA9AAB-30F0-46F6-BDAF-A0C01CA0D2B0}"
 EndProject
