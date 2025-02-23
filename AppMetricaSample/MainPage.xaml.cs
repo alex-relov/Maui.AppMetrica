@@ -1,24 +1,24 @@
-﻿namespace AppMetricaSample;
+﻿using Maui.AppMetrica;
+
+namespace AppMetricaSample;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
-	public MainPage()
+	private readonly IAnalytic analytic;
+	public MainPage(IAnalytic analytic)
 	{
+		this.analytic = analytic;
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	private void SendEvent(object sender, EventArgs e)
 	{
-		count++;
+		analytic.Event("Event from maui!");
+	}
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
+	private void CrashApp(object sender, EventArgs e)
+	{
+		throw new ArgumentException("Crash from maui app");
 	}
 }
 
